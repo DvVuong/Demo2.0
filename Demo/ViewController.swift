@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     
     var codeCity = 0
     var codeDistrict = 0
+    var text = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,6 @@ class ViewController: UIViewController {
         //view.layer.compositingFilter = "luminosityBlendMode"
         let cat = Cat()
         cat.makeSound()
-        
         setupViewEllipse()
         setupTfUsername()
         setupLbTitle()
@@ -57,7 +57,6 @@ class ViewController: UIViewController {
         setupTfCittes()
         setuptfDistricts()
         setupTextView()
-       
         viewTfUser.layer.borderWidth = 1
         viewTfUser.layer.cornerRadius = 8
         viewTfUser.layer.masksToBounds = true
@@ -108,11 +107,12 @@ class ViewController: UIViewController {
             .foregroundColor: UIColor.white,
             .underlineColor: UIColor.white,
             .underlineStyle: NSUnderlineStyle.single.rawValue
+            
         ]
-   
 //    @objc func didReceiverNotification(_ notification: Notification) {
 //
 //        print(notification.object as? City)
+        
   }
     
     private func setupViewEllipse(){
@@ -130,6 +130,7 @@ class ViewController: UIViewController {
     }
     private func setupTfUsername(){
         tfUsername.placeholder = "Username"
+        tfUsername.delegate = self
         tfUsername.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         tfUsername.attributedPlaceholder = NSAttributedString(string: "Username",attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
     }
@@ -141,7 +142,6 @@ class ViewController: UIViewController {
     }
     private func setupTfPassword(){
         tfPassword.placeholder = "Password"
-        
         tfPassword.layer.borderColor = UIColor.white.cgColor
 //        tfPassword.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1)
         tfPassword.attributedPlaceholder = NSAttributedString(string: "Password",attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
@@ -156,10 +156,9 @@ class ViewController: UIViewController {
         btCreateAcount.addTarget(self, action: #selector(tapOnMoveMoviesScreen), for: .touchUpInside)
     }
     @objc func tapOnMoveMoviesScreen(){
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MoviesScreen")
+        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MoviesScreen") as? MoviesViewController else {return}
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
-        
     }
     private func setupTfCittes(){
         tfCities.placeholder = "Cities"
@@ -194,6 +193,13 @@ extension ViewController: UITextFieldDelegate {
                 self.codeDistrict = $0.districtCode
             }
         }
+        if textField == tfUsername {
+            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListScreen") as? ListViewController else{ return false }
+            vc.modalPresentationStyle = .overFullScreen
+            
+            present(vc, animated: true)
+                    
+        }
         return false
     }
     func textFieldDidChangeSelection(_ textField: UITextField) {
@@ -210,5 +216,4 @@ extension ViewController : UITextViewDelegate{
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
         return false
     }
-    
 }

@@ -59,14 +59,14 @@ class MoviesViewController: UIViewController {
     private func setupcollectionview(){
         collectionview.delegate = self
         collectionview.dataSource = self
-        if let flowLayout = collectionview.collectionViewLayout as? UICollectionViewFlowLayout {
+        if let flowLayout = collectionview.collectionViewLayout as? UICollectionViewFlowLayout {// lấy layout của collectionview(mỗi một collectionview chỉ sinh ra 1 collectionviewlayout duy nhất)
            flowLayout.minimumInteritemSpacing  = 20
            flowLayout.minimumLineSpacing = 10
            let numberOfRow:CGFloat = 2
            let totalwidth = (collectionview.frame.width - 0.1)
            let width = (totalwidth - 32  - (numberOfRow - 1) * flowLayout.minimumInteritemSpacing)  / 2
             flowLayout.itemSize = CGSize(width: width, height: 400)
-            flowLayout.sectionInset = UIEdgeInsets(top: 32, left: 32, bottom: 32, right: 32)
+            flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 32, bottom: 0, right: 32)
         }
         let nib = UINib(nibName: "MoviesCollectionViewCell", bundle: nil)
         collectionview?.register(nib, forCellWithReuseIdentifier: "MoviesCell")
@@ -79,19 +79,29 @@ class MoviesViewController: UIViewController {
     }
 }
 extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-//    func numberOfSections(in collectionView: UICollectionView) -> Int {
-//        return 2
-//    }
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 2
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return movies.count
 //        if section == 0{
-//            return 20
+//
 //        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "MoviesCell", for: indexPath) as! MoviesCollectionViewCell
-        cell.updateUI(movies[indexPath.item])
+        if indexPath.section == 0 {
+//            let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "MoviesCell", for: indexPath) as! MoviesCollectionViewCell
+            cell.updateUI(movies[indexPath.item])
+            //return cell
+           // print(indexPath.section)
+        }
+        if indexPath.section == 1 {
+            cell.lbNameMovie.text = " asdasdasd"
+            cell.imgMovie.isHidden = true
+            cell.backgroundColor = .yellow
+        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -133,6 +143,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         collectionView.deselectItem(at: indexPath, animated: true)
         movies[indexPath.section].isOpen = !movies[indexPath.section].isOpen
         collectionView.reloadSections([indexPath.section])
+        
     }
 }
 

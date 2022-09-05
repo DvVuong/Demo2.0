@@ -10,9 +10,9 @@ import Kingfisher
 
 class MoviesCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var imgMovie: UIImageView!
+    @IBOutlet  weak var imgMovie: UIImageView!
     @IBOutlet private weak var lbvoteaverage: UILabel!
-    @IBOutlet private weak var lbNameMovie: UILabel!
+    @IBOutlet  weak var lbNameMovie: UILabel!
     @IBOutlet private weak var view: UIView!
     @IBOutlet private weak var ratingControl: RatingControl!
  

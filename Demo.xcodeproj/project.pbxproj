@@ -28,11 +28,17 @@
 		847901C628B63F4300A1FAEE /* MoviesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847901C428B63F4300A1FAEE /* MoviesCollectionViewCell.swift */; };
 		847901C728B63F4300A1FAEE /* MoviesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847901C528B63F4300A1FAEE /* MoviesCollectionViewCell.xib */; };
 		847901C928B640DD00A1FAEE /* MoviesApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847901C828B640DD00A1FAEE /* MoviesApi.swift */; };
+		848188EE28BEF4DC0080927A /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848188ED28BEF4DC0080927A /* EditViewController.swift */; };
+		848188F228BF15D00080927A /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848188F128BF15D00080927A /* SectionData.swift */; };
 		8482C68F28BC853600DA14B9 /* HeaderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482C68D28BC853600DA14B9 /* HeaderCollection.swift */; };
 		8482C69028BC853600DA14B9 /* HeaderCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8482C68E28BC853600DA14B9 /* HeaderCollection.xib */; };
 		848F43D828B762D8008C68D9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F43D728B762D8008C68D9 /* RatingControl.swift */; };
 		8490AF7B28BDBB5C003BEC65 /* FooterCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490AF7928BDBB5C003BEC65 /* FooterCollection.swift */; };
 		8490AF7C28BDBB5C003BEC65 /* FooterCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8490AF7A28BDBB5C003BEC65 /* FooterCollection.xib */; };
+		8490AF8028BE0466003BEC65 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490AF7F28BE0466003BEC65 /* ListViewController.swift */; };
+		8490AF8228BE0697003BEC65 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490AF8128BE0697003BEC65 /* ListCell.swift */; };
+		8490AF8428BE0940003BEC65 /* UpdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490AF8328BE0940003BEC65 /* UpdateViewController.swift */; };
+		8490AF8628BE18A5003BEC65 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490AF8528BE18A5003BEC65 /* Fruit.swift */; };
 		849646B628B4661400304D0C /* DistrictsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849646B428B4661400304D0C /* DistrictsTableViewCell.swift */; };
 		849646B728B4661400304D0C /* DistrictsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849646B528B4661400304D0C /* DistrictsTableViewCell.xib */; };
 		849646B928B46CD600304D0C /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849646B828B46CD600304D0C /* Cities.swift */; };
@@ -109,11 +115,17 @@
 		847901C428B63F4300A1FAEE /* MoviesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesCollectionViewCell.swift; sourceTree = "<group>"; };
 		847901C528B63F4300A1FAEE /* MoviesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesCollectionViewCell.xib; sourceTree = "<group>"; };
 		847901C828B640DD00A1FAEE /* MoviesApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesApi.swift; sourceTree = "<group>"; };
+		848188ED28BEF4DC0080927A /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
+		848188F128BF15D00080927A /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		8482C68D28BC853600DA14B9 /* HeaderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollection.swift; sourceTree = "<group>"; };
 		8482C68E28BC853600DA14B9 /* HeaderCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollection.xib; sourceTree = "<group>"; };
 		848F43D728B762D8008C68D9 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		8490AF7928BDBB5C003BEC65 /* FooterCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollection.swift; sourceTree = "<group>"; };
 		8490AF7A28BDBB5C003BEC65 /* FooterCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCollection.xib; sourceTree = "<group>"; };
+		8490AF7F28BE0466003BEC65 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		8490AF8128BE0697003BEC65 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
+		8490AF8328BE0940003BEC65 /* UpdateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateViewController.swift; sourceTree = "<group>"; };
+		8490AF8528BE18A5003BEC65 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		849646B428B4661400304D0C /* DistrictsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictsTableViewCell.swift; sourceTree = "<group>"; };
 		849646B528B4661400304D0C /* DistrictsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistrictsTableViewCell.xib; sourceTree = "<group>"; };
 		849646B828B46CD600304D0C /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
@@ -173,12 +185,18 @@
 			children = (
 				844E68A128B3438D004ECF14 /* AppDelegate.swift */,
 				847901C228B639B200A1FAEE /* MoviesViewController.swift */,
+				848188ED28BEF4DC0080927A /* EditViewController.swift */,
 				844E68D328B36BC2004ECF14 /* DistrictsViewController.swift */,
+				8490AF8328BE0940003BEC65 /* UpdateViewController.swift */,
 				844E68D128B36AE8004ECF14 /* CitiesViewController.swift */,
 				848F43D728B762D8008C68D9 /* RatingControl.swift */,
 				844E68A528B3438D004ECF14 /* ViewController.swift */,
+				8490AF8128BE0697003BEC65 /* ListCell.swift */,
 				844E68A328B3438D004ECF14 /* SceneDelegate.swift */,
+				8490AF7F28BE0466003BEC65 /* ListViewController.swift */,
+				8490AF8528BE18A5003BEC65 /* Fruit.swift */,
 				847901C028B628C800A1FAEE /* CityStoryboard.storyboard */,
+				848188F128BF15D00080927A /* SectionData.swift */,
 				844E68A728B3438D004ECF14 /* Main.storyboard */,
 				844E68AA28B3438F004ECF14 /* Assets.xcassets */,
 				844E68AC28B3438F004ECF14 /* LaunchScreen.storyboard */,
@@ -401,11 +419,17 @@
 				847901C328B639B200A1FAEE /* MoviesViewController.swift in Sources */,
 				8490AF7B28BDBB5C003BEC65 /* FooterCollection.swift in Sources */,
 				847901C628B63F4300A1FAEE /* MoviesCollectionViewCell.swift in Sources */,
+				848188EE28BEF4DC0080927A /* EditViewController.swift in Sources */,
 				844E68A628B3438D004ECF14 /* ViewController.swift in Sources */,
+				8490AF8428BE0940003BEC65 /* UpdateViewController.swift in Sources */,
+				848188F228BF15D00080927A /* SectionData.swift in Sources */,
+				8490AF8228BE0697003BEC65 /* ListCell.swift in Sources */,
 				848F43D828B762D8008C68D9 /* RatingControl.swift in Sources */,
 				844E68D428B36BC2004ECF14 /* DistrictsViewController.swift in Sources */,
 				8482C68F28BC853600DA14B9 /* HeaderCollection.swift in Sources */,
+				8490AF8028BE0466003BEC65 /* ListViewController.swift in Sources */,
 				844E68D228B36AE8004ECF14 /* CitiesViewController.swift in Sources */,
+				8490AF8628BE18A5003BEC65 /* Fruit.swift in Sources */,
 				847901C928B640DD00A1FAEE /* MoviesApi.swift in Sources */,
 				849646BB28B46D5200304D0C /* Districts.swift in Sources */,
 				849646B628B4661400304D0C /* DistrictsTableViewCell.swift in Sources */,
