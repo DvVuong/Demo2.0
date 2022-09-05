@@ -43,6 +43,7 @@
 		849646B728B4661400304D0C /* DistrictsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849646B528B4661400304D0C /* DistrictsTableViewCell.xib */; };
 		849646B928B46CD600304D0C /* Cities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849646B828B46CD600304D0C /* Cities.swift */; };
 		849646BB28B46D5200304D0C /* Districts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849646BA28B46D5200304D0C /* Districts.swift */; };
+		84AE3E0628C5991C008FC12F /* KeyUserDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AE3E0528C5991C008FC12F /* KeyUserDefault.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		849646B528B4661400304D0C /* DistrictsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DistrictsTableViewCell.xib; sourceTree = "<group>"; };
 		849646B828B46CD600304D0C /* Cities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cities.swift; sourceTree = "<group>"; };
 		849646BA28B46D5200304D0C /* Districts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Districts.swift; sourceTree = "<group>"; };
+		84AE3E0528C5991C008FC12F /* KeyUserDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyUserDefault.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +217,7 @@
 				847901C828B640DD00A1FAEE /* MoviesApi.swift */,
 				8482C68D28BC853600DA14B9 /* HeaderCollection.swift */,
 				8482C68E28BC853600DA14B9 /* HeaderCollection.xib */,
+				84AE3E0528C5991C008FC12F /* KeyUserDefault.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 				848188F228BF15D00080927A /* SectionData.swift in Sources */,
 				8490AF8228BE0697003BEC65 /* ListCell.swift in Sources */,
 				848F43D828B762D8008C68D9 /* RatingControl.swift in Sources */,
+				84AE3E0628C5991C008FC12F /* KeyUserDefault.swift in Sources */,
 				844E68D428B36BC2004ECF14 /* DistrictsViewController.swift in Sources */,
 				8482C68F28BC853600DA14B9 /* HeaderCollection.swift in Sources */,
 				8490AF8028BE0466003BEC65 /* ListViewController.swift in Sources */,

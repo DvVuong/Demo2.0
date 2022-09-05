@@ -6,21 +6,28 @@
 //
 
 import UIKit
+import SwiftUI
+import CoreMIDI
 class ListViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var btAddNew: UIButton!
     var dem = 0
     private var fruit = [Fruit]()
+    let userDefault = UserDefaults.standard
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setuptableView()
         bindata()
         setupBtaddNew()
-        upDateData()
+      
     }
     private func setuptableView(){
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        //tableView.separatorStyle = .none
     }
     private func bindata(){
         let f1 = Fruit(name: "Mango")
@@ -37,12 +44,16 @@ class ListViewController: UIViewController {
     @objc func tapOnadd(){
         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "update") as? UpdateViewController else {return}
         vc.modalPresentationStyle = .overFullScreen
+        // Save Data to userdefault
         vc.delegate = self
         present(vc, animated: true)
     }
 }
-extension ListViewController : UITableViewDelegate, UITableViewDataSource {
+
+extension ListViewController : UITableViewDelegate, UITableViewDataSource  {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let data = userDefault.array(forKey: Fruit_KEY)
         return fruit.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,25 +67,40 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource {
         vc.fruit = fruit[indexPath.row]
         vc.delegate = self
         vc.index = indexPath.row
+        
         present(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let delete = UIContextualAction(style: .destructive, title: "Delete") { action, sourceView, completionHandler in
-            self.fruit.remove(at: indexPath.row)
-            tableView.reloadData()
-            completionHandler(true)
-        }
-        let swipeAction = UISwipeActionsConfiguration(actions: [delete])
-        swipeAction.performsFirstActionWithFullSwipe = false
-        return swipeAction
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        fruit.swapAt(sourceIndexPath.row, destinationIndexPath.row)
+//        let itemMove = fruit[sourceIndexPath.row]
+//        fruit.remove(at: sourceIndexPath.row)
+//        fruit.insert(itemMove, at: destinationIndexPath.row)
     }
-    func upDateData(){
-        if let data = SessionData.share.newfruit {
-            self.fruit.append(data)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            fruit.remove(at: indexPath.row)
             tableView.reloadData()
+        }
+    }
+//    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+//        let delete = UIContextualAction(style: .destructive, title: "Delete") { action, sourceView, completionHandler in
+//            self.fruit.remove(at: indexPath.row)
+//            tableView.reloadData()
+//            completionHandler(true)
+//        }
+//        let swipeAction = UISwipeActionsConfiguration(actions: [delete])
+//        swipeAction.performsFirstActionWithFullSwipe = false
+//        return swipeAction
+//    }
+    @IBAction func didtapSort(){
+        if tableView.isEditing {
+            tableView.isEditing = false
+        }
+        else{
+            tableView.isEditing = true
         }
     }
 }

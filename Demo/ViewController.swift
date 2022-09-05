@@ -196,8 +196,8 @@ extension ViewController: UITextFieldDelegate {
         if textField == tfUsername {
             guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListScreen") as? ListViewController else{ return false }
             vc.modalPresentationStyle = .overFullScreen
-            
-            present(vc, animated: true)
+            navigationController?.pushViewController(vc, animated: true)
+            //present(vc, animated: true)
                     
         }
         return false
