@@ -13,12 +13,14 @@ class JobsCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+//        self.layer.cornerRadius = 20
+//        self.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+//        self.layer.masksToBounds = true
+//        
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     func updateUI(_ job: Jobs){
         lbJobtitle.text = job.jobTitle

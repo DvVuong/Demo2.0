@@ -13,6 +13,10 @@ class requirementCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         lbrequirement.numberOfLines = 0
+//        self.layer.cornerRadius = 20
+//        self.layer.maskedCorners = 
+//        self.layer.masksToBounds = true
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
