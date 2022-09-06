@@ -31,10 +31,6 @@ class UpdateViewController: UIViewController {
     }
     @objc func tapOnAdd(){
         let fruit = Fruit(name: tfInput.text!)
-        let userDefault = UserDefaults.standard
-        userDefault.set(fruit.name, forKey:Fruit_KEY)
-        dump(userDefault)
-        userDefault.synchronize()
         SessionData.share.newfruit = fruit
         delegate?.addNewfruit(newFruit: fruit)
         dismiss(animated: true)

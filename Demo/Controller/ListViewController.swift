@@ -14,14 +14,11 @@ class ListViewController: UIViewController {
     var dem = 0
     private var fruit = [Fruit]()
     let userDefault = UserDefaults.standard
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setuptableView()
         bindata()
         setupBtaddNew()
-      
     }
     private func setuptableView(){
         tableView.delegate = self
@@ -49,11 +46,9 @@ class ListViewController: UIViewController {
         present(vc, animated: true)
     }
 }
-
 extension ListViewController : UITableViewDelegate, UITableViewDataSource  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let data = userDefault.array(forKey: Fruit_KEY)
         return fruit.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,7 +62,6 @@ extension ListViewController : UITableViewDelegate, UITableViewDataSource  {
         vc.fruit = fruit[indexPath.row]
         vc.delegate = self
         vc.index = indexPath.row
-        
         present(vc, animated: true)
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {

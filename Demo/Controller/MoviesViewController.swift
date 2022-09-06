@@ -91,17 +91,17 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "MoviesCell", for: indexPath) as! MoviesCollectionViewCell
-        if indexPath.section == 0 {
-//            let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "MoviesCell", for: indexPath) as! MoviesCollectionViewCell
+//        if indexPath.section == 0 {
+////            let cell = collectionview.dequeueReusableCell(withReuseIdentifier: "MoviesCell", for: indexPath) as! MoviesCollectionViewCell
             cell.updateUI(movies[indexPath.item])
             //return cell
            // print(indexPath.section)
-        }
-        if indexPath.section == 1 {
-            cell.lbNameMovie.text = " asdasdasd"
-            cell.imgMovie.isHidden = true
-            cell.backgroundColor = .yellow
-        }
+//        }
+//        if indexPath.section == 1 {
+//            cell.lbNameMovie.text = " asdasdasd"
+//            cell.imgMovie.isHidden = true
+//            cell.backgroundColor = .yellow
+//        }
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -111,17 +111,7 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
             header.lbDescription.text = "Movies"
             header.lbDescription.backgroundColor = .blue
             header.onClickedSeeMore = {
-                self.buttonCounter += 1
-                if self.buttonCounter % 2 != 0 {
-                    self.expand = true
-                    self.movies.removeAll()
-                    collectionView.reloadData()
-                    print("true")
-                }else{
-                    self.movies.append(contentsOf: self.newMovie)
-                    collectionView.reloadData()
-                    print("false")
-                }
+                
             }
             return header
         case UICollectionView.elementKindSectionFooter:
@@ -140,9 +130,26 @@ extension MoviesViewController: UICollectionViewDelegate, UICollectionViewDataSo
         return CGSize(width: collectionview.frame.width, height: 50)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (indexPath.section == 0) {
+            self.buttonCounter += 1
+            if self.buttonCounter % 2 != 0 {
+                self.expand = true
+                self.movies.remove(at: indexPath.section)
+                print(indexPath.section)
+                collectionView.reloadData()
+                print("true")
+            }else{
+//                    self.movies.append(contentsOf: self.newMovie)
+//                    collectionView.reloadData()
+                print("false")
+            }
+            print("section1 \(indexPath.item)")
+        }else{
+            print("section2 \(indexPath.item)")
+        }
         collectionView.deselectItem(at: indexPath, animated: true)
-        movies[indexPath.section].isOpen = !movies[indexPath.section].isOpen
-        collectionView.reloadSections([indexPath.section])
+        //movies[indexPath.section].isOpen = !movies[indexPath.section].isOpen
+        //collectionView.reloadSections([indexPath.section])
         
     }
 }

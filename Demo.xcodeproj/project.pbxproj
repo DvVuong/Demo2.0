@@ -32,6 +32,13 @@
 		848188F228BF15D00080927A /* SectionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848188F128BF15D00080927A /* SectionData.swift */; };
 		8482C68F28BC853600DA14B9 /* HeaderCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8482C68D28BC853600DA14B9 /* HeaderCollection.swift */; };
 		8482C69028BC853600DA14B9 /* HeaderCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8482C68E28BC853600DA14B9 /* HeaderCollection.xib */; };
+		8487550B28C6E7A8006A9741 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487550A28C6E7A8006A9741 /* JobsViewController.swift */; };
+		8487550F28C6E8FB006A9741 /* JobsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487550E28C6E8FB006A9741 /* JobsCell.swift */; };
+		8487551128C6EA5F006A9741 /* ServerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 8487551028C6EA5F006A9741 /* ServerData.json */; };
+		8487551328C6EA72006A9741 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487551228C6EA72006A9741 /* Jobs.swift */; };
+		8487551728C6F9E3006A9741 /* SalaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487551628C6F9E3006A9741 /* SalaryCell.swift */; };
+		8487551928C6F9F0006A9741 /* requirementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487551828C6F9F0006A9741 /* requirementCell.swift */; };
+		8487551C28C6FA79006A9741 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8487551B28C6FA79006A9741 /* AddressCell.swift */; };
 		848F43D828B762D8008C68D9 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848F43D728B762D8008C68D9 /* RatingControl.swift */; };
 		8490AF7B28BDBB5C003BEC65 /* FooterCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8490AF7928BDBB5C003BEC65 /* FooterCollection.swift */; };
 		8490AF7C28BDBB5C003BEC65 /* FooterCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8490AF7A28BDBB5C003BEC65 /* FooterCollection.xib */; };
@@ -120,6 +127,13 @@
 		848188F128BF15D00080927A /* SectionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionData.swift; sourceTree = "<group>"; };
 		8482C68D28BC853600DA14B9 /* HeaderCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCollection.swift; sourceTree = "<group>"; };
 		8482C68E28BC853600DA14B9 /* HeaderCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderCollection.xib; sourceTree = "<group>"; };
+		8487550A28C6E7A8006A9741 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		8487550E28C6E8FB006A9741 /* JobsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsCell.swift; sourceTree = "<group>"; };
+		8487551028C6EA5F006A9741 /* ServerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ServerData.json; sourceTree = "<group>"; };
+		8487551228C6EA72006A9741 /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
+		8487551628C6F9E3006A9741 /* SalaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalaryCell.swift; sourceTree = "<group>"; };
+		8487551828C6F9F0006A9741 /* requirementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requirementCell.swift; sourceTree = "<group>"; };
+		8487551B28C6FA79006A9741 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
 		848F43D728B762D8008C68D9 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		8490AF7928BDBB5C003BEC65 /* FooterCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterCollection.swift; sourceTree = "<group>"; };
 		8490AF7A28BDBB5C003BEC65 /* FooterCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FooterCollection.xib; sourceTree = "<group>"; };
@@ -185,39 +199,18 @@
 		844E68A028B3438D004ECF14 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				844E68A128B3438D004ECF14 /* AppDelegate.swift */,
-				847901C228B639B200A1FAEE /* MoviesViewController.swift */,
-				848188ED28BEF4DC0080927A /* EditViewController.swift */,
-				844E68D328B36BC2004ECF14 /* DistrictsViewController.swift */,
-				8490AF8328BE0940003BEC65 /* UpdateViewController.swift */,
-				844E68D128B36AE8004ECF14 /* CitiesViewController.swift */,
-				848F43D728B762D8008C68D9 /* RatingControl.swift */,
+				8487551A28C6F9F9006A9741 /* Controller */,
+				8487551628C6F9E3006A9741 /* SalaryCell.swift */,
+				8487551228C6EA72006A9741 /* Jobs.swift */,
+				8487551B28C6FA79006A9741 /* AddressCell.swift */,
+				8487550A28C6E7A8006A9741 /* JobsViewController.swift */,
 				844E68A528B3438D004ECF14 /* ViewController.swift */,
-				8490AF8128BE0697003BEC65 /* ListCell.swift */,
-				844E68A328B3438D004ECF14 /* SceneDelegate.swift */,
-				8490AF7F28BE0466003BEC65 /* ListViewController.swift */,
-				8490AF8528BE18A5003BEC65 /* Fruit.swift */,
-				847901C028B628C800A1FAEE /* CityStoryboard.storyboard */,
-				848188F128BF15D00080927A /* SectionData.swift */,
 				844E68A728B3438D004ECF14 /* Main.storyboard */,
 				844E68AA28B3438F004ECF14 /* Assets.xcassets */,
-				844E68AC28B3438F004ECF14 /* LaunchScreen.storyboard */,
+				8487550E28C6E8FB006A9741 /* JobsCell.swift */,
 				844E68AF28B3438F004ECF14 /* Info.plist */,
-				844E68D728B38A89004ECF14 /* Cities.plist */,
-				844E68D528B36D83004ECF14 /* Districts.plist */,
-				844E68DA28B38C5A004ECF14 /* CitiesTableViewCell.xib */,
-				8490AF7928BDBB5C003BEC65 /* FooterCollection.swift */,
-				8490AF7A28BDBB5C003BEC65 /* FooterCollection.xib */,
-				849646B428B4661400304D0C /* DistrictsTableViewCell.swift */,
-				849646B528B4661400304D0C /* DistrictsTableViewCell.xib */,
-				849646B828B46CD600304D0C /* Cities.swift */,
-				849646BA28B46D5200304D0C /* Districts.swift */,
-				847901C428B63F4300A1FAEE /* MoviesCollectionViewCell.swift */,
-				847901C528B63F4300A1FAEE /* MoviesCollectionViewCell.xib */,
-				847901C828B640DD00A1FAEE /* MoviesApi.swift */,
-				8482C68D28BC853600DA14B9 /* HeaderCollection.swift */,
-				8482C68E28BC853600DA14B9 /* HeaderCollection.xib */,
-				84AE3E0528C5991C008FC12F /* KeyUserDefault.swift */,
+				8487551028C6EA5F006A9741 /* ServerData.json */,
+				8487551828C6F9F0006A9741 /* requirementCell.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -253,6 +246,42 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8487551A28C6F9F9006A9741 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				844E68D328B36BC2004ECF14 /* DistrictsViewController.swift */,
+				8490AF7F28BE0466003BEC65 /* ListViewController.swift */,
+				847901C028B628C800A1FAEE /* CityStoryboard.storyboard */,
+				844E68AC28B3438F004ECF14 /* LaunchScreen.storyboard */,
+				848188F128BF15D00080927A /* SectionData.swift */,
+				8490AF7928BDBB5C003BEC65 /* FooterCollection.swift */,
+				844E68A328B3438D004ECF14 /* SceneDelegate.swift */,
+				8490AF8528BE18A5003BEC65 /* Fruit.swift */,
+				8490AF7A28BDBB5C003BEC65 /* FooterCollection.xib */,
+				848F43D728B762D8008C68D9 /* RatingControl.swift */,
+				847901C528B63F4300A1FAEE /* MoviesCollectionViewCell.xib */,
+				84AE3E0528C5991C008FC12F /* KeyUserDefault.swift */,
+				847901C828B640DD00A1FAEE /* MoviesApi.swift */,
+				8482C68E28BC853600DA14B9 /* HeaderCollection.xib */,
+				849646B528B4661400304D0C /* DistrictsTableViewCell.xib */,
+				8482C68D28BC853600DA14B9 /* HeaderCollection.swift */,
+				844E68D528B36D83004ECF14 /* Districts.plist */,
+				844E68DA28B38C5A004ECF14 /* CitiesTableViewCell.xib */,
+				849646BA28B46D5200304D0C /* Districts.swift */,
+				847901C428B63F4300A1FAEE /* MoviesCollectionViewCell.swift */,
+				849646B828B46CD600304D0C /* Cities.swift */,
+				849646B428B4661400304D0C /* DistrictsTableViewCell.swift */,
+				844E68D728B38A89004ECF14 /* Cities.plist */,
+				8490AF8128BE0697003BEC65 /* ListCell.swift */,
+				844E68D128B36AE8004ECF14 /* CitiesViewController.swift */,
+				8490AF8328BE0940003BEC65 /* UpdateViewController.swift */,
+				848188ED28BEF4DC0080927A /* EditViewController.swift */,
+				847901C228B639B200A1FAEE /* MoviesViewController.swift */,
+				844E68A128B3438D004ECF14 /* AppDelegate.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -387,6 +416,7 @@
 				8490AF7C28BDBB5C003BEC65 /* FooterCollection.xib in Resources */,
 				844E68AE28B3438F004ECF14 /* LaunchScreen.storyboard in Resources */,
 				847901C128B628C800A1FAEE /* CityStoryboard.storyboard in Resources */,
+				8487551128C6EA5F006A9741 /* ServerData.json in Resources */,
 				844E68AB28B3438F004ECF14 /* Assets.xcassets in Resources */,
 				8482C69028BC853600DA14B9 /* HeaderCollection.xib in Resources */,
 				844E68D828B38A89004ECF14 /* Cities.plist in Resources */,
@@ -419,16 +449,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				849646B928B46CD600304D0C /* Cities.swift in Sources */,
+				8487551C28C6FA79006A9741 /* AddressCell.swift in Sources */,
 				847901C328B639B200A1FAEE /* MoviesViewController.swift in Sources */,
 				8490AF7B28BDBB5C003BEC65 /* FooterCollection.swift in Sources */,
+				8487551328C6EA72006A9741 /* Jobs.swift in Sources */,
 				847901C628B63F4300A1FAEE /* MoviesCollectionViewCell.swift in Sources */,
 				848188EE28BEF4DC0080927A /* EditViewController.swift in Sources */,
 				844E68A628B3438D004ECF14 /* ViewController.swift in Sources */,
 				8490AF8428BE0940003BEC65 /* UpdateViewController.swift in Sources */,
 				848188F228BF15D00080927A /* SectionData.swift in Sources */,
+				8487551728C6F9E3006A9741 /* SalaryCell.swift in Sources */,
 				8490AF8228BE0697003BEC65 /* ListCell.swift in Sources */,
+				8487550F28C6E8FB006A9741 /* JobsCell.swift in Sources */,
 				848F43D828B762D8008C68D9 /* RatingControl.swift in Sources */,
 				84AE3E0628C5991C008FC12F /* KeyUserDefault.swift in Sources */,
+				8487551928C6F9F0006A9741 /* requirementCell.swift in Sources */,
 				844E68D428B36BC2004ECF14 /* DistrictsViewController.swift in Sources */,
 				8482C68F28BC853600DA14B9 /* HeaderCollection.swift in Sources */,
 				8490AF8028BE0466003BEC65 /* ListViewController.swift in Sources */,
@@ -438,6 +473,7 @@
 				849646BB28B46D5200304D0C /* Districts.swift in Sources */,
 				849646B628B4661400304D0C /* DistrictsTableViewCell.swift in Sources */,
 				844E68A228B3438D004ECF14 /* AppDelegate.swift in Sources */,
+				8487550B28C6E7A8006A9741 /* JobsViewController.swift in Sources */,
 				844E68A428B3438D004ECF14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

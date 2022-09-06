@@ -138,6 +138,7 @@ class ViewController: UIViewController {
         tfEmail.placeholder = "Email"
 //        tfEmail.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         tfEmail.attributedPlaceholder = NSAttributedString(string: "Email",attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+        tfEmail.delegate = self
         
     }
     private func setupTfPassword(){
@@ -199,6 +200,11 @@ extension ViewController: UITextFieldDelegate {
             navigationController?.pushViewController(vc, animated: true)
             //present(vc, animated: true)
                     
+        }
+        if textField == tfEmail {
+            guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "jobsScreen") as? JobsViewController else { return false }
+            vc.modalPresentationStyle = .overFullScreen
+            present(vc, animated: true)
         }
         return false
     }
